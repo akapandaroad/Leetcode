@@ -1,5 +1,16 @@
 /**
  * Created by akapandaroad on 2018-05-31.
+ * Example :
+ Input:
+ widths = [4,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10]
+ S = "bbbcccdddaaa"
+ Output: [2, 4]
+ Explanation:
+ All letters except 'a' have the same length of 10, and
+ "bbbcccdddaa" will cover 9 * 10 + 2 * 4 = 98 units.
+ For the last 'a', it is written on the second line because
+ there is only 2 units left in the first line.
+ So the answer is 2 lines, plus 4 units in the second line.
  */
 public class Easy_7_806 {
 
