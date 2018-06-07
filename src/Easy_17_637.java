@@ -31,10 +31,39 @@ public class Easy_17_637 {
 
         TreeNode root = BuildTree();
 
-        Bfs(root);
+        Bfs(root);//进队列
+        Dfs(root);// 利用前序遍历了
 
     }
 
+    private static void Dfs(TreeNode root) {
+        List < Integer > count = new ArrayList < > ();
+        List < Double > res = new ArrayList < > ();
+        average(root, 0, res, count);
+        for (int i = 0; i <res.size() ; i++) {
+            res.set(i,res.get(i)/count.get(i));
+        }
+
+        System.out.println(res);
+    }
+
+    private static void average(TreeNode root, int i, List<Double> res, List<Integer> count) {
+
+        if(root==null)
+            return ;
+
+        if(i<res.size()){
+            res.set(i,res.get(i) +root.val);
+            count.set(i,count.get(i)+1);
+        }else{
+            res.add((double) root.val);
+            count.add(1);
+        }
+
+        average(root.left,i+1,res,count);
+        average(root.right,i+1,res,count);
+
+    }
 
 
     private static void Bfs(TreeNode root) {
