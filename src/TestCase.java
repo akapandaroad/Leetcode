@@ -8,6 +8,9 @@ public class TestCase {
         int a=123123;
         int b=900;
 
+        String num1="123";
+
+        System.out.println(Integer.parseInt(num1));
         StringBuilder sb=new StringBuilder(String.valueOf(a));
 
         System.out.println(Integer.parseInt(sb.reverse().toString()));

@@ -17,6 +17,7 @@ public class Easy_33_242 {
     public static void main(String[] args) {
         String s = "anagram";
         String t = "nagaram";
+
 HashMap<String,Integer> map=new HashMap<>();
 
 
